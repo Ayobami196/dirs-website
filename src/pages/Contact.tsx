@@ -63,7 +63,7 @@ export default function Contact() {
             <span>Contact</span>
           </nav>
           <h1>Let's <span style={{ color: 'var(--gold)' }}>Connect</span></h1>
-          <p>Ready to get started? Reach out and let's talk about how DIRS can solve your IT challenges.</p>
+          <p>Ready to get started? Reach out and let's talk about how DIRSOL can solve your IT challenges.</p>
         </div>
       </section>
 
@@ -80,7 +80,7 @@ export default function Contact() {
             <span className="gold-divider" />
             <p className="contact-intro">
               Whether you're ready to get started, have a quick question, or just
-              want to learn more about DIRS — we're here for it. Fill out the form
+              want to learn more about DIRSOL — we're here for it. Fill out the form
               and a member of our team will be in touch within one business day.
             </p>
 

@@ -34,7 +34,7 @@ const services: Service[] = [
     tag: 'Core Service',
     title: 'IT Managed Services',
     subtitle: 'Your IT. Fully Managed.',
-    description: `DIRS provides comprehensive IT managed services that give you full confidence in your technology infrastructure. We act as your dedicated IT department — monitoring, maintaining, optimizing, and securing your entire environment around the clock.`,
+    description: `DIRSOL provides comprehensive IT managed services that give you full confidence in your technology infrastructure. We act as your dedicated IT department — monitoring, maintaining, optimizing, and securing your entire environment around the clock.`,
     description2: `Whether you need to offload your entire IT operation or supplement an internal team, our flexible managed service plans are designed to scale with your organization.`,
     features: [
       '24/7 infrastructure monitoring & alerting',
@@ -60,7 +60,7 @@ const services: Service[] = [
     tag: 'Advanced Solutions',
     title: 'Data Solutions',
     subtitle: 'Turn Data Into Decisions.',
-    description: `Data is your most valuable asset — but only when it's clean, accessible, and actionable. DIRS designs and implements end-to-end data solutions that give you the visibility and intelligence to make smarter, faster decisions.`,
+    description: `Data is your most valuable asset — but only when it's clean, accessible, and actionable. DIRSOL designs and implements end-to-end data solutions that give you the visibility and intelligence to make smarter, faster decisions.`,
     description2: `From building robust data pipelines to establishing governance frameworks, our data team brings deep expertise across modern data platforms, cloud environments, and analytics tools.`,
     features: [
       'Data architecture & system design',
@@ -86,15 +86,15 @@ const services: Service[] = [
     tag: 'Infrastructure Service',
     title: 'Data Center Solutions',
     subtitle: 'Build It Right. Modernize It Right.',
-    description: `The data center is the heartbeat of your organization. Whether you're commissioning a new facility or modernizing an aging one, DIRS delivers end-to-end infrastructure expertise across the full data center lifecycle — with the precision, project discipline, and physical IT craftsmanship that enterprise environments demand.`,
-    description2: `Our practice is built around two specialized tracks: Greenfield for ground-up infrastructure deployments, and Brownfield for migrations, modernizations, and ongoing maintenance programs. Both tracks are backed by certified field engineers and governed by the same DIRS standard — done right, every time.`,
+    description: `The data center is the heartbeat of your organization. Whether you're commissioning a new facility or modernizing an aging one, DIRSOL delivers end-to-end infrastructure expertise across the full data center lifecycle — with the precision, project discipline, and physical IT craftsmanship that enterprise environments demand.`,
+    description2: `Our practice is built around two specialized tracks: Greenfield for ground-up infrastructure deployments, and Brownfield for migrations, modernizations, and ongoing maintenance programs. Both tracks are backed by certified field engineers and governed by the same DIRSOL standard — done right, every time.`,
     highlight: 'Full Lifecycle Coverage',
     subcategories: [
       {
         type: 'greenfield',
         label: 'Greenfield',
         title: 'New Build Infrastructure Deployment',
-        desc: 'Deploy with confidence from day one. Our Greenfield practice covers the complete physical layer of your next data center — engineered for high density, full redundancy, and long-term scalability. DIRS partners with you from initial site assessment through power-on certification, ensuring every structured system meets enterprise-grade standards before your first production workload goes live. We don\'t just install infrastructure — we build the foundation your business will grow on for years to come.',
+        desc: 'Deploy with confidence from day one. Our Greenfield practice covers the complete physical layer of your next data center — engineered for high density, full redundancy, and long-term scalability. DIRSOL partners with you from initial site assessment through power-on certification, ensuring every structured system meets enterprise-grade standards before your first production workload goes live. We don\'t just install infrastructure — we build the foundation your business will grow on for years to come.',
         features: [
           'Site readiness assessments & raised floor planning',
           'Structured cabling design & installation (Cat6A, OS2 fiber, OM4)',
@@ -112,7 +112,7 @@ const services: Service[] = [
         type: 'brownfield',
         label: 'Brownfield',
         title: 'Migration, Modernization & Ongoing Maintenance',
-        desc: 'Legacy environments carry real risk — aging hardware, undocumented configurations, tangled cabling, and mounting technical debt. DIRS brings a structured, zero-surprise approach to your data center migration, consolidation, or modernization project. We engineer the path forward with precision scheduling, live-environment discipline, and a relentless focus on protecting your uptime through every phase of change — from the first infrastructure audit to the final go-live cutover.',
+        desc: 'Legacy environments carry real risk — aging hardware, undocumented configurations, tangled cabling, and mounting technical debt. DIRSOL brings a structured, zero-surprise approach to your data center migration, consolidation, or modernization project. We engineer the path forward with precision scheduling, live-environment discipline, and a relentless focus on protecting your uptime through every phase of change — from the first infrastructure audit to the final go-live cutover.',
         features: [
           'End-to-end data center migration planning & live execution',
           'Hardware installation, staging & phased deployment',
@@ -138,7 +138,7 @@ const services: Service[] = [
     tag: 'On-Demand Service',
     title: 'Smart Hands as a Service',
     subtitle: 'Skilled Hands, Where You Need Them.',
-    description: `When you need certified IT professionals on the ground — at your data center, colocation facility, or remote site — DIRS Smart Hands delivers. Our field technicians are experienced, equipped, and ready to execute with precision.`,
+    description: `When you need certified IT professionals on the ground — at your data center, colocation facility, or remote site — DIRSOL Smart Hands delivers. Our field technicians are experienced, equipped, and ready to execute with precision.`,
     description2: `Eliminate the cost and complexity of maintaining in-house field resources. Our Smart Hands service provides on-demand access to skilled IT personnel who can handle any physical IT task with the same quality and care you'd expect from your own team.`,
     features: [
       'Data center rack & stack',
@@ -293,12 +293,12 @@ export default function Services() {
         </div>
       </section>
 
-      {/* ── Why DIRS ── */}
+      {/* ── Why DIRSOL ── */}
       <section className="services-why">
         <div className="container">
           <div className="section-header center" style={{ marginBottom: 48 }}>
-            <div className="section-tag">The DIRS Difference</div>
-            <h2 className="section-heading">Why Clients Choose <span>DIRS</span></h2>
+            <div className="section-tag">The DIRSOL Difference</div>
+            <h2 className="section-heading">Why Clients Choose <span>DIRSOL</span></h2>
             <span className="gold-divider center" />
           </div>
           <div className="diff-grid">
@@ -306,7 +306,7 @@ export default function Services() {
               { title: 'Single Point of Contact', desc: 'One dedicated team for all your IT needs — no runarounds, no hand-offs to strangers.' },
               { title: 'Proactive, Not Reactive', desc: 'We catch issues before they become outages, protecting your uptime and your reputation.' },
               { title: 'Flexible Engagements', desc: 'Month-to-month, project-based, or long-term managed services — we work on your terms.' },
-              { title: 'Women-Owned Advantage', desc: "Partnering with DIRS may satisfy supplier diversity requirements for your organization's contracts." },
+              { title: 'Women-Owned Advantage', desc: "Partnering with DIRSOL may satisfy supplier diversity requirements for your organization's contracts." },
             ].map((d) => (
               <div key={d.title} className="diff-card">
                 <div className="diff-bullet" />
@@ -324,11 +324,11 @@ export default function Services() {
           <div className="cta-inner">
             <div>
               <h2>Let's Find the Right Solution for You</h2>
-              <p>Schedule a free consultation with our team and discover how DIRS can elevate your technology.</p>
+              <p>Schedule a free consultation with our team and discover how DIRSOL can elevate your technology.</p>
             </div>
             <div className="cta-actions">
               <Link to="/contact" className="btn-primary">Schedule a Consultation</Link>
-              <Link to="/about" className="btn-outline">Learn About DIRS</Link>
+              <Link to="/about" className="btn-outline">Learn About DIRSOL</Link>
             </div>
           </div>
         </div>

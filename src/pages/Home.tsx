@@ -81,7 +81,7 @@ export default function Home() {
               Every Single Time.
             </h1>
             <p className="hero-sub">
-              DO IT RIGHT SOLUTIONS (DIRS) delivers enterprise-grade IT managed services,
+              DO IT RIGHT SOLUTIONS (DIRSOL) delivers enterprise-grade IT managed services,
               data solutions, and smart hands support — built for businesses that demand
               reliability and results.
             </p>
@@ -161,7 +161,7 @@ export default function Home() {
             <span className="gold-divider center" />
             <p className="section-subtext" style={{ margin: '0 auto' }}>
               From managing your entire IT environment to deploying field technicians on demand,
-              DIRS delivers the expertise and reliability you need to move forward with confidence.
+              DIRSOL delivers the expertise and reliability you need to move forward with confidence.
             </p>
           </div>
 
@@ -183,17 +183,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Why DIRS ── */}
+      {/* ── Why DIRSOL ── */}
       <section className="why-dirs">
         <div className="container why-inner">
           <div className="why-left">
-            <div className="section-tag">Why DIRS</div>
+            <div className="section-tag">Why DIRSOL</div>
             <h2 className="section-heading">
               A Partner You Can <span>Rely On</span>
             </h2>
             <span className="gold-divider" />
             <p className="section-subtext">
-              DIRS was founded on a simple principle: technology should work for you,
+              DIRSOL was founded on a simple principle: technology should work for you,
               not against you. We combine deep technical expertise with a client-first
               approach that ensures every solution truly fits your needs.
             </p>
@@ -245,7 +245,7 @@ export default function Home() {
         <div className="container cta-inner">
           <div>
             <h2>Ready to Experience IT Done Right?</h2>
-            <p>Let's talk about how DIRS can transform your technology and drive your business forward.</p>
+            <p>Let's talk about how DIRSOL can transform your technology and drive your business forward.</p>
           </div>
           <div className="cta-actions">
             <Link to="/contact" className="btn-primary">Get a Free Quote</Link>

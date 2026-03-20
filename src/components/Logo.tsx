@@ -4,18 +4,18 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
-  const widths = { sm: 160, md: 200, lg: 240 }
+  const widths = { sm: 170, md: 220, lg: 260 }
   const w = widths[size]
   const textColor = variant === 'light' ? '#FFFFFF' : '#0D1B2A'
   const subColor  = variant === 'light' ? 'rgba(255,255,255,0.6)' : '#6B7280'
 
   return (
     <svg
-      viewBox="0 0 220 52"
+      viewBox="0 0 260 52"
       width={w}
-      height={w * 52 / 220}
+      height={w * 52 / 260}
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="DO IT RIGHT SOLUTIONS logo"
+      aria-label="DO IT RIGHT SOLUTIONS — DIRSOL logo"
     >
       {/* Hexagon shield icon */}
       <polygon
@@ -31,7 +31,7 @@ export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* DIRS wordmark */}
+      {/* DIRSOL wordmark */}
       <text
         x="62"
         y="24"
@@ -41,7 +41,7 @@ export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
         fill={textColor}
         letterSpacing="3"
       >
-        DIRS
+        DIRSOL
       </text>
       {/* Tagline */}
       <text
@@ -55,7 +55,7 @@ export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
         DO IT RIGHT SOLUTIONS
       </text>
       {/* Gold accent line */}
-      <rect x="62" y="27" width="148" height="1.5" fill="#C9A84C" opacity="0.5" />
+      <rect x="62" y="27" width="188" height="1.5" fill="#C9A84C" opacity="0.5" />
     </svg>
   )
 }

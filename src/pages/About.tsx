@@ -61,7 +61,7 @@ const values = [
 ]
 
 const milestones = [
-  { year: '2022', label: 'DIRS Founded', detail: 'Established as a women-owned IT managed services company with a mission to deliver enterprise-grade solutions to businesses of all sizes.' },
+  { year: '2022', label: 'DIRSOL Founded', detail: 'Established as a women-owned IT managed services company with a mission to deliver enterprise-grade solutions to businesses of all sizes.' },
   { year: '2022', label: 'Smart Hands Launch', detail: 'Launched our Smart Hands as a Service offering, connecting businesses with certified field technicians on demand.' },
   { year: '2023', label: 'Data Solutions Division', detail: 'Expanded into comprehensive data solutions — architecture, pipelines, analytics, and governance frameworks.' },
   { year: '2024', label: 'Growing Client Base', detail: 'Grew our portfolio of managed service clients across multiple industries, delivering 99.9% uptime SLAs.' },
@@ -79,7 +79,7 @@ export default function About() {
             <span>›</span>
             <span>About</span>
           </nav>
-          <h1>About <span style={{ color: 'var(--gold)' }}>DIRS</span></h1>
+          <h1>About <span style={{ color: 'var(--gold)' }}>DIRSOL</span></h1>
           <p>Women-owned, mission-driven, and built to deliver IT excellence since 2022.</p>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function About() {
                 <polyline points="36,60 52,76 84,44" stroke="#C9A84C" strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <div className="story-emblem-text">
-                <strong>DIRS</strong>
+                <strong>DIRSOL</strong>
                 <span>Est. 2022</span>
               </div>
             </div>
@@ -116,12 +116,12 @@ export default function About() {
             </h2>
             <span className="gold-divider" />
             <p>
-              DO IT RIGHT SOLUTIONS (DIRS) was founded in 2022 with a bold, simple conviction:
+              DO IT RIGHT SOLUTIONS (DIRSOL) was founded in 2022 with a bold, simple conviction:
               businesses deserve IT that actually works — delivered by people who genuinely care
               about doing it right.
             </p>
             <p>
-              As a women-owned small business, DIRS was built to challenge the status quo in
+              As a women-owned small business, DIRSOL was built to challenge the status quo in
               managed IT services. Our founder recognized a gap between what businesses needed
               from their technology partners and what the market was delivering — and decided
               to close it.
@@ -146,13 +146,13 @@ export default function About() {
             </h2>
             <span className="gold-divider" />
             <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.75 }}>
-              As a certified women-owned business, DIRS brings a distinct perspective to
+              As a certified women-owned business, DIRSOL brings a distinct perspective to
               technology — one centered on communication, empathy, and a commitment to building
               equitable, inclusive workplaces. We believe diverse leadership drives better
               outcomes, and we're proud to be a role model in the IT industry.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, marginTop: 12 }}>
-              When you partner with DIRS, you're also supporting a business that invests in
+              When you partner with DIRSOL, you're also supporting a business that invests in
               diverse talent and champions equal opportunity across the technology sector.
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function About() {
               Ready to Work With a Partner That Gets It Right?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: 520 }}>
-              Let's connect and explore how DIRS can become the IT partner your business deserves.
+              Let's connect and explore how DIRSOL can become the IT partner your business deserves.
             </p>
           </div>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', flexShrink: 0 }}>

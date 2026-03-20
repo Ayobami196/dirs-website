@@ -75,7 +75,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p>© {year} DO IT RIGHT SOLUTIONS, LLC (DIRS). All rights reserved.</p>
+          <p>© {year} DO IT RIGHT SOLUTIONS, LLC (DIRSOL). All rights reserved.</p>
           <p className="footer-wob-note">Proud Women-Owned Small Business</p>
         </div>
       </div>
