@@ -11,51 +11,55 @@ export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
 
   return (
     <svg
-      viewBox="0 0 260 52"
+      viewBox="0 0 290 62"
       width={w}
-      height={w * 52 / 260}
+      height={w * 62 / 290}
       xmlns="http://www.w3.org/2000/svg"
       aria-label="DO IT RIGHT SOLUTIONS — DIRSOL logo"
     >
-      {/* Hexagon shield icon */}
-      <polygon
-        points="26,3 44,3 52,17 44,33 26,33 18,17"
-        fill="#0D1B2A"
-      />
-      {/* Gold checkmark */}
-      <polyline
-        points="24,18 30,25 46,10"
+      {/* DIRSOL wordmark */}
+      <text
+        x="6"
+        y="32"
+        fontFamily="Montserrat, Arial, sans-serif"
+        fontWeight="800"
+        fontSize="30"
+        fill={textColor}
+        letterSpacing="4"
+      >
+        DIRSOL
+      </text>
+
+      {/* Gold smile sweeping under the wordmark, rising at the right end */}
+      <path
+        d="M 10 40 Q 100 50 175 32"
         stroke="#C9A84C"
-        strokeWidth="3"
+        strokeWidth="3.2"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* Arrowhead at smile tip (points up-right, clears tagline) */}
+      <polyline
+        points="168,28 175,32 172,38"
+        stroke="#C9A84C"
+        strokeWidth="3.2"
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* DIRSOL wordmark */}
-      <text
-        x="62"
-        y="24"
-        fontFamily="Montserrat, Arial, sans-serif"
-        fontWeight="800"
-        fontSize="20"
-        fill={textColor}
-        letterSpacing="3"
-      >
-        DIRSOL
-      </text>
+
       {/* Tagline */}
       <text
-        x="63"
-        y="37"
+        x="8"
+        y="58"
         fontFamily="Montserrat, Arial, sans-serif"
-        fontSize="7.8"
+        fontSize="8.2"
         fill={subColor}
-        letterSpacing="1.8"
+        letterSpacing="2.4"
       >
         DO IT RIGHT SOLUTIONS
       </text>
-      {/* Gold accent line */}
-      <rect x="62" y="27" width="188" height="1.5" fill="#C9A84C" opacity="0.5" />
     </svg>
   )
 }

@@ -418,6 +418,56 @@
   background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(201,168,76,0.15) 0%, transparent 70%);
 }
 
+/* ── Staffing lead-in band ── */
+
+.services-staffing-note {
+  padding: 44px 0 0;
+  background: var(--white);
+}
+
+.staffing-note-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 32px 36px;
+  background: var(--off-white);
+  border: 1px solid var(--gray-light);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-md);
+}
+
+.staffing-note-text { max-width: 700px; }
+
+.staffing-note-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 10px;
+}
+
+.staffing-note-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.staffing-note-text p {
+  font-size: 0.92rem;
+  color: var(--gray-dark);
+  line-height: 1.7;
+}
+
+.staffing-note-cta { flex-shrink: 0; }
+
 /* ── Responsive ── */
 
 @media (max-width: 900px) {
@@ -445,4 +495,8 @@
   .diff-grid { grid-template-columns: 1fr; }
   .cta-inner { flex-direction: column; text-align: center; }
   .cta-actions { justify-content: center; }
+}
+
+@media (max-width: 860px) {
+  .staffing-note-inner { flex-direction: column; align-items: flex-start; padding: 26px 24px; }
 }

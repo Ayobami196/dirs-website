@@ -18,7 +18,7 @@ const values = [
       </svg>
     ),
     title: 'Reliability',
-    desc: "When downtime isn't an option, you need a partner you can count on around the clock.",
+    desc: "When the shift has to be covered, you need people who show up — and a partner who answers the phone.",
   },
   {
     icon: (
@@ -37,7 +37,7 @@ const values = [
       </svg>
     ),
     title: 'Excellence',
-    desc: 'We hold ourselves to the highest standard — because mediocre IT is not an option.',
+    desc: 'We hold ourselves to the highest standard — because a mediocre placement costs you more than an empty seat.',
   },
   {
     icon: (
@@ -61,10 +61,10 @@ const values = [
 ]
 
 const milestones = [
-  { year: '2022', label: 'DIRSOL Founded', detail: 'Established as a women-owned IT managed services company with a mission to deliver enterprise-grade solutions to businesses of all sizes.' },
-  { year: '2022', label: 'Smart Hands Launch', detail: 'Launched our Smart Hands as a Service offering, connecting businesses with certified field technicians on demand.' },
-  { year: '2023', label: 'Data Solutions Division', detail: 'Expanded into comprehensive data solutions — architecture, pipelines, analytics, and governance frameworks.' },
-  { year: '2024', label: 'Growing Client Base', detail: 'Grew our portfolio of managed service clients across multiple industries, delivering 99.9% uptime SLAs.' },
+  { year: '2024', label: 'DIRSOL Registered', detail: 'Established as an IT staffing company with a mission to put genuinely qualified technical people into the roles businesses struggle hardest to fill.' },
+  { year: '2024', label: 'Data Center Practice', detail: 'Built a dedicated bench of badge-ready data center technicians — rack & stack, structured cabling, smart hands, and NOC shift coverage nationwide.' },
+  { year: '2024', label: 'Managed Project Teams', detail: 'Extended staffing into deliverable-based crews: a full team with an on-site DIRSOL lead, for clients who needed an outcome rather than a headcount.' },
+  { year: '2025', label: 'Services Practice Launch', detail: 'Grew out of the bench into full delivery — managed IT, data solutions, and data center builds — so a staffing engagement can scale into a complete scope of work.' },
 ]
 
 export default function About() {
@@ -80,7 +80,7 @@ export default function About() {
             <span>About</span>
           </nav>
           <h1>About <span style={{ color: 'var(--gold)' }}>DIRSOL</span></h1>
-          <p>Women-owned, mission-driven, and built to deliver IT excellence since 2022.</p>
+          <p>Registered as an IT staffing company in 2024 &mdash; still built on putting the right people in the right seats.</p>
         </div>
       </section>
 
@@ -95,7 +95,7 @@ export default function About() {
               </svg>
               <div className="story-emblem-text">
                 <strong>DIRSOL</strong>
-                <span>Est. 2022</span>
+                <span>IT Staffing &middot; Est. 2024</span>
               </div>
             </div>
             <div className="story-badge wob-highlight">
@@ -103,8 +103,8 @@ export default function About() {
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
               </svg>
               <div>
-                <strong>Women-Owned Business</strong>
-                <span>Certified · Founded 2022</span>
+                <strong>Certified Women-Owned Business</strong>
+                <span>IT &amp; Data Center Staffing</span>
               </div>
             </div>
           </div>
@@ -116,63 +116,24 @@ export default function About() {
             </h2>
             <span className="gold-divider" />
             <p>
-              DO IT RIGHT SOLUTIONS (DIRSOL) was founded in 2022 with a bold, simple conviction:
-              businesses deserve IT that actually works — delivered by people who genuinely care
-              about doing it right.
+              DO IT RIGHT SOLUTIONS (DIRSOL) was registered in 2024 as an IT staffing company,
+              on a bold and simple conviction: most technology problems are really people problems,
+              and businesses deserve technical staff who actually know the work.
             </p>
             <p>
-              As a women-owned small business, DIRSOL was built to challenge the status quo in
-              managed IT services. Our founder recognized a gap between what businesses needed
-              from their technology partners and what the market was delivering — and decided
-              to close it.
+              Our founder saw the same gap on both sides of the hiring table: companies fighting
+              to find technicians who could hold their own in a live data hall, and skilled
+              professionals cycling through agencies that could not tell a patch panel from a
+              PDU. DIRSOL was built to close that gap &mdash; technical recruiting run by people
+              who have done the work themselves.
             </p>
             <p>
-              From our first engagement, we committed to being the partner we always wished
-              existed: responsive, transparent, technically excellent, and deeply invested
-              in the success of every client we serve. That commitment is reflected in every
-              ticket we close, every data pipeline we build, and every rack we configure.
+              Staffing is still the core of the business, and the services practice grew directly
+              out of it: once you have the technicians, engineers, and project leads on the bench,
+              you can also deliver the work end to end. Today clients engage us either way &mdash;
+              staff augmentation and direct hire, or a full managed scope &mdash; and it is the same
+              standard on both. Done right, every time.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WOB Highlight ── */}
-      <section className="wob-section">
-        <div className="container wob-inner">
-          <div className="wob-text">
-            <div className="section-tag">Women-Owned Business</div>
-            <h2 className="section-heading" style={{ color: 'var(--white)' }}>
-              Diverse Leadership.<br /><span>Exceptional Results.</span>
-            </h2>
-            <span className="gold-divider" />
-            <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.75 }}>
-              As a certified women-owned business, DIRSOL brings a distinct perspective to
-              technology — one centered on communication, empathy, and a commitment to building
-              equitable, inclusive workplaces. We believe diverse leadership drives better
-              outcomes, and we're proud to be a role model in the IT industry.
-            </p>
-            <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, marginTop: 12 }}>
-              When you partner with DIRSOL, you're also supporting a business that invests in
-              diverse talent and champions equal opportunity across the technology sector.
-            </p>
-          </div>
-          <div className="wob-stat-grid">
-            <div className="wob-stat">
-              <strong>2022</strong>
-              <span>Year Founded</span>
-            </div>
-            <div className="wob-stat">
-              <strong>WOB</strong>
-              <span>Certified</span>
-            </div>
-            <div className="wob-stat">
-              <strong>100%</strong>
-              <span>Client Focus</span>
-            </div>
-            <div className="wob-stat">
-              <strong>3+</strong>
-              <span>Core Services</span>
-            </div>
           </div>
         </div>
       </section>
@@ -230,15 +191,15 @@ export default function About() {
         <div className="container cta-inner-about">
           <div>
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--white)', marginBottom: 10 }}>
-              Ready to Work With a Partner That Gets It Right?
+              Ready to Get the Right People In Place?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: 520 }}>
-              Let's connect and explore how DIRSOL can become the IT partner your business deserves.
+              Let's connect and explore how DIRSOL can staff your team — or take on the whole scope.
             </p>
           </div>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', flexShrink: 0 }}>
             <Link to="/contact" className="btn-primary">Contact Us</Link>
-            <Link to="/services" className="btn-outline">Our Services</Link>
+            <Link to="/staffing" className="btn-outline">Our Staffing Services</Link>
           </div>
         </div>
       </section>

@@ -150,3 +150,17 @@
     padding: 13px 22px;
   }
 }
+
+/* Tighten spacing between mobile breakpoint and desktop so all six links fit */
+@media (min-width: 769px) and (max-width: 1080px) {
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.81rem;
+    letter-spacing: 0;
+  }
+
+  .nav-cta {
+    padding: 9px 16px;
+    font-size: 0.8rem;
+  }
+}

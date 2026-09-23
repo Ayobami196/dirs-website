@@ -3,9 +3,15 @@ import { Link } from 'react-router-dom'
 import './Contact.css'
 
 const serviceOptions = [
+  'Contract / Staff Augmentation',
+  'Contract-to-Hire',
+  'Direct Hire / Permanent Placement',
+  'Managed Project Team (SOW)',
+  'Data Center Staffing & Smart Hands',
   'IT Managed Services',
   'Data Solutions',
-  'Smart Hands as a Service',
+  'Data Center Solutions',
+  'I am a candidate looking for work',
   'General Inquiry',
   'Partnership Opportunity',
 ]
@@ -63,7 +69,7 @@ export default function Contact() {
             <span>Contact</span>
           </nav>
           <h1>Let's <span style={{ color: 'var(--gold)' }}>Connect</span></h1>
-          <p>Ready to get started? Reach out and let's talk about how DIRSOL can solve your IT challenges.</p>
+          <p>Need to fill a role, staff a project, or find your next assignment? Reach out and let's talk.</p>
         </div>
       </section>
 
@@ -79,9 +85,10 @@ export default function Contact() {
             </h2>
             <span className="gold-divider" />
             <p className="contact-intro">
-              Whether you're ready to get started, have a quick question, or just
-              want to learn more about DIRSOL — we're here for it. Fill out the form
-              and a member of our team will be in touch within one business day.
+              Whether you have a role to fill, a project to staff, or a resume to send our way —
+              we're here for it. Fill out the form and a member of our team will be in touch
+              within one business day. Job seekers can also submit a full profile on our{' '}
+              <Link to="/careers">Careers page</Link>.
             </p>
 
             <div className="contact-methods">
@@ -124,12 +131,6 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="contact-wob">
-              <svg viewBox="0 0 24 24" fill="var(--gold)" width="20" height="20">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-              </svg>
-              <span>Women-Owned Business · Founded 2022</span>
-            </div>
           </div>
 
           {/* Form col */}
@@ -179,9 +180,9 @@ export default function Contact() {
                 </div>
 
                 <div className={`form-group ${errors.service ? 'has-error' : ''}`}>
-                  <label htmlFor="service">Service of Interest <span className="req">*</span></label>
+                  <label htmlFor="service">How Can We Help? <span className="req">*</span></label>
                   <select id="service" value={form.service} onChange={set('service')}>
-                    <option value="">Select a service...</option>
+                    <option value="">Select an option...</option>
                     {serviceOptions.map(o => (
                       <option key={o} value={o}>{o}</option>
                     ))}
@@ -190,11 +191,11 @@ export default function Contact() {
                 </div>
 
                 <div className={`form-group ${errors.message ? 'has-error' : ''}`}>
-                  <label htmlFor="message">How Can We Help? <span className="req">*</span></label>
+                  <label htmlFor="message">Tell Us More <span className="req">*</span></label>
                   <textarea
                     id="message"
                     rows={5}
-                    placeholder="Tell us about your IT needs, current challenges, or any questions you have..."
+                    placeholder="The role and skills you need, headcount, location and shift, start date — or your background if you are looking for work..."
                     value={form.message}
                     onChange={set('message')}
                   />

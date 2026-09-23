@@ -5,59 +5,60 @@ const services = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-        <path d="M6 8h.01M9 8h6"/>
+        <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
       </svg>
     ),
-    title: 'IT Managed Services',
-    desc: 'End-to-end management of your IT infrastructure — proactive monitoring, maintenance, helpdesk, and strategic planning so you can focus on your business.',
-    link: '/services',
+    title: 'IT Staffing',
+    desc: 'Help desk, network, systems, cloud, security, and data professionals placed on contract, contract-to-hire, or direct hire — screened by people who have done the work.',
+    link: '/staffing',
   },
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
-        <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/>
+        <rect x="3" y="3" width="18" height="6" rx="1" /><rect x="3" y="11" width="18" height="6" rx="1" />
+        <path d="M7 6h.01M7 14h.01M12 19v2M8 21h8" />
       </svg>
     ),
-    title: 'Data Solutions',
-    desc: 'Transform raw data into strategic assets. We design, implement, and optimize data pipelines, storage, analytics, and governance frameworks.',
-    link: '/services',
+    title: 'Data Center Staffing',
+    desc: 'Badge-ready technicians for rack & stack, structured cabling, smart hands, NOC shifts, and critical facilities — nationwide, including nights and weekends.',
+    link: '/staffing',
   },
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+        <path d="M3 21V8l9-5 9 5v13" /><path d="M9 21v-6h6v6" /><path d="M3 12h18" />
       </svg>
     ),
-    title: 'Smart Hands as a Service',
-    desc: 'On-demand, highly skilled field technicians deployed at your data center or remote site — cable runs, hardware installs, rack & stack, and physical IT tasks.',
-    link: '/services',
+    title: 'Managed Project Teams',
+    desc: 'When you need an outcome instead of a headcount, we deploy a full crew with an on-site lead and own the supervision, schedule, and deliverables.',
+    link: '/staffing#managed-teams',
   },
 ]
 
 const stats = [
-  { value: '2022', label: 'Founded' },
-  { value: '100%', label: 'Women-Owned' },
-  { value: '24/7', label: 'Support Available' },
-  { value: '99.9%', label: 'Uptime Commitment' },
+  { value: '2024', label: 'Founded' },
+  { value: '48–72h', label: 'Target First Submittal' },
+  { value: 'W2', label: 'Employer of Record' },
+  { value: '24/7', label: 'Shift Coverage' },
 ]
 
 const whyCards = [
   {
     icon: '✓',
     title: 'Done Right. Every Time.',
-    desc: 'Our name is our promise. Every engagement is delivered with precision, accountability, and a commitment to excellence.',
+    desc: 'Our name is our promise. Every placement and every project is delivered with precision, accountability, and a commitment to excellence.',
   },
   {
     icon: '⚡',
-    title: 'Rapid Response',
-    desc: 'Time is critical in IT. Our team responds quickly, resolves efficiently, and keeps your operations running without interruption.',
+    title: 'Fast, Calibrated Submittals',
+    desc: 'You get a short slate of qualified people — typically within 48 to 72 hours — not a stack of resumes to sort through yourself.',
   },
   {
     icon: '🔒',
-    title: 'Security-First Mindset',
-    desc: 'We build security into every layer of what we do — protecting your infrastructure, data, and people proactively.',
+    title: 'Compliance Carried by Us',
+    desc: 'W2 employment, payroll, taxes, insurance, background checks, and drug screening all sit on our side of the engagement.',
   },
   {
     icon: '🤝',
@@ -75,19 +76,19 @@ export default function Home() {
         <div className="hero-bg" />
         <div className="container hero-content">
           <div className="hero-text animate-fade-up">
-            <div className="section-tag">Women-Owned · Est. 2022</div>
+            <div className="section-tag">IT &amp; Data Center Staffing · Est. 2024</div>
             <h1>
-              IT Solutions Done <span className="gold-text">Right.</span><br />
+              Technical Talent Done <span className="gold-text">Right.</span><br />
               Every Single Time.
             </h1>
             <p className="hero-sub">
-              DO IT RIGHT SOLUTIONS (DIRSOL) delivers enterprise-grade IT managed services,
-              data solutions, and smart hands support — built for businesses that demand
-              reliability and results.
+              DO IT RIGHT SOLUTIONS (DIRSOL) staffs the IT departments and data center floors that
+              keep businesses running — contract, contract-to-hire, direct hire, and fully managed
+              project crews, backed by the technical services team behind them.
             </p>
             <div className="hero-ctas animate-fade-up-delay-1">
-              <Link to="/services" className="btn-primary">Explore Services</Link>
-              <Link to="/contact" className="btn-outline">Get a Free Quote</Link>
+              <Link to="/staffing" className="btn-primary">Hire Talent</Link>
+              <Link to="/careers" className="btn-outline">Find Your Next Role</Link>
             </div>
           </div>
 
@@ -96,34 +97,35 @@ export default function Home() {
               <div className="hero-card hc-1">
                 <span className="hc-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                    <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />
                   </svg>
                 </span>
                 <div>
-                  <strong>99.9% Uptime</strong>
-                  <span>Infrastructure SLA</span>
+                  <strong>48–72 Hours</strong>
+                  <span>To first submittal</span>
                 </div>
               </div>
               <div className="hero-card hc-2">
                 <span className="hc-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 00-3-3.87" />
                   </svg>
                 </span>
                 <div>
-                  <strong>24/7 Support</strong>
-                  <span>Always available</span>
+                  <strong>W2 Contractors</strong>
+                  <span>Compliance on us</span>
                 </div>
               </div>
               <div className="hero-card hc-3">
                 <span className="hc-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                 </span>
                 <div>
-                  <strong>Security-First</strong>
-                  <span>Every solution</span>
+                  <strong>Badge-Ready</strong>
+                  <span>Screened &amp; vetted</span>
                 </div>
               </div>
             </div>
@@ -133,7 +135,7 @@ export default function Home() {
         {/* Scroll indicator */}
         <div className="hero-scroll">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
-            <path d="M12 5v14M5 12l7 7 7-7"/>
+            <path d="M12 5v14M19 12l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
       </section>
@@ -150,18 +152,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Services Overview ── */}
+      {/* ── Staffing Overview ── */}
       <section className="services-overview">
         <div className="container">
           <div className="section-header center">
             <div className="section-tag">What We Do</div>
             <h2 className="section-heading">
-              Comprehensive IT <span>Services</span><br />Built for Your Business
+              Staffing Built for <span>IT &amp; Data Centers</span>
             </h2>
             <span className="gold-divider center" />
             <p className="section-subtext" style={{ margin: '0 auto' }}>
-              From managing your entire IT environment to deploying field technicians on demand,
-              DIRSOL delivers the expertise and reliability you need to move forward with confidence.
+              DIRSOL was registered as an IT staffing company, and that is still the heart of the
+              business. We place the technical people your operation depends on — from a single
+              service desk seat to a full deployment crew.
             </p>
           </div>
 
@@ -174,11 +177,51 @@ export default function Home() {
                 <Link to={svc.link} className="svc-link">
                   Learn More
                   <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M10.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 01-1.4-1.4L13.6 11H4a1 1 0 110-2h9.6l-3.3-3.3a1 1 0 010-1.4z" clipRule="evenodd" />
                   </svg>
                 </Link>
               </div>
             ))}
+          </div>
+
+          {/* Services support band */}
+          <div className="delivery-band">
+            <div className="delivery-band-text">
+              <span className="delivery-band-tag">Beyond Staffing</span>
+              <h3>We can also deliver the work ourselves.</h3>
+              <p>
+                Because our team runs managed IT, data solutions, data center builds, and smart hands
+                engagements, a staffing conversation can become a full scope of work without you
+                changing vendors.
+              </p>
+            </div>
+            <Link to="/services" className="btn-outline-dark">Explore Our Services</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Dual audience ── */}
+      <section className="audience-split">
+        <div className="container audience-grid">
+          <div className="audience-card employers">
+            <span className="audience-tag">For Employers</span>
+            <h3>Need to fill a role?</h3>
+            <p>
+              Send us the requirement and we come back with a short, calibrated slate — screening
+              notes, rates, and availability attached. Contract, contract-to-hire, direct hire,
+              or a full managed crew.
+            </p>
+            <Link to="/staffing" className="btn-primary">Request Talent</Link>
+          </div>
+
+          <div className="audience-card candidates">
+            <span className="audience-tag">For Job Seekers</span>
+            <h3>Looking for your next assignment?</h3>
+            <p>
+              Join the DIRSOL bench. W2 employment, honest rates stated up front, real project work,
+              and redeployment when an assignment ends — at no cost to you, ever.
+            </p>
+            <Link to="/careers" className="btn-outline">Submit Your Profile</Link>
           </div>
         </div>
       </section>
@@ -189,38 +232,38 @@ export default function Home() {
           <div className="why-left">
             <div className="section-tag">Why DIRSOL</div>
             <h2 className="section-heading">
-              A Partner You Can <span>Rely On</span>
+              A Staffing Partner You Can <span>Rely On</span>
             </h2>
             <span className="gold-divider" />
             <p className="section-subtext">
-              DIRSOL was founded on a simple principle: technology should work for you,
-              not against you. We combine deep technical expertise with a client-first
-              approach that ensures every solution truly fits your needs.
+              DIRSOL was founded on a simple principle: the right people, placed the right way,
+              solve most technology problems. We combine deep technical screening with a
+              client-first approach that makes every placement actually fit.
             </p>
             <div className="why-highlights">
               <div className="wh-item">
                 <svg viewBox="0 0 20 20" fill="var(--gold)" width="18" height="18">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-3.5-3.5a1 1 0 111.4-1.4l2.8 2.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
                 </svg>
-                Certified IT professionals
+                Certified IT &amp; data center professionals
               </div>
               <div className="wh-item">
                 <svg viewBox="0 0 20 20" fill="var(--gold)" width="18" height="18">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-3.5-3.5a1 1 0 111.4-1.4l2.8 2.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
                 </svg>
-                Women-owned, minority-forward leadership
+                Minority-forward leadership
               </div>
               <div className="wh-item">
                 <svg viewBox="0 0 20 20" fill="var(--gold)" width="18" height="18">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-3.5-3.5a1 1 0 111.4-1.4l2.8 2.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
                 </svg>
-                Transparent, flat-rate pricing
+                Transparent, all-in bill rates
               </div>
               <div className="wh-item">
                 <svg viewBox="0 0 20 20" fill="var(--gold)" width="18" height="18">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-3.5-3.5a1 1 0 111.4-1.4l2.8 2.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
                 </svg>
-                Scalable solutions that grow with you
+                One seat or a whole crew — we scale either way
               </div>
             </div>
             <Link to="/about" className="btn-outline-dark">Our Story</Link>
@@ -244,12 +287,12 @@ export default function Home() {
       <section className="cta-banner">
         <div className="container cta-inner">
           <div>
-            <h2>Ready to Experience IT Done Right?</h2>
-            <p>Let's talk about how DIRSOL can transform your technology and drive your business forward.</p>
+            <h2>Ready to Get the Right People In Place?</h2>
+            <p>Tell us about the role — or the project — and we will come back with a plan and a slate.</p>
           </div>
           <div className="cta-actions">
-            <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
-            <Link to="/services" className="btn-outline">View Services</Link>
+            <Link to="/contact" className="btn-primary">Request Talent</Link>
+            <Link to="/staffing" className="btn-outline">How We Staff</Link>
           </div>
         </div>
       </section>

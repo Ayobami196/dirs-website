@@ -14,24 +14,25 @@ export default function Footer() {
           <div className="footer-brand">
             <Logo variant="light" size="md" />
             <p className="footer-tagline">
-              Reliable IT solutions delivered with precision, integrity, and care — done right, every time.
+              IT and data center staffing delivered with precision, integrity, and care — done right, every time.
             </p>
             <div className="wob-badge">
               <svg viewBox="0 0 20 20" width="16" height="16" fill="var(--gold)">
                 <path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14.5a6.5 6.5 0 110-13 6.5 6.5 0 010 13zm.75-9.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-.75 1.5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 8.75z"/>
               </svg>
-              Women-Owned Business · Est. 2022
+              IT Staffing &middot; Est. 2024
             </div>
           </div>
 
-          {/* Quick links */}
+          {/* Staffing */}
           <div className="footer-col">
-            <h4>Quick Links</h4>
+            <h4>Staffing</h4>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/staffing#contract">Contract &amp; Staff Augmentation</Link></li>
+              <li><Link to="/staffing#contract-to-hire">Contract-to-Hire</Link></li>
+              <li><Link to="/staffing#direct-hire">Direct Hire</Link></li>
+              <li><Link to="/staffing#managed-teams">Managed Project Teams</Link></li>
+              <li><Link to="/careers">For Job Seekers</Link></li>
             </ul>
           </div>
 
@@ -41,7 +42,9 @@ export default function Footer() {
             <ul>
               <li><Link to="/services">IT Managed Services</Link></li>
               <li><Link to="/services">Data Solutions</Link></li>
+              <li><Link to="/services">Data Center Solutions</Link></li>
               <li><Link to="/services">Smart Hands as a Service</Link></li>
+              <li><Link to="/about">About DIRSOL</Link></li>
             </ul>
           </div>
 
@@ -76,7 +79,6 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p>© {year} DO IT RIGHT SOLUTIONS, LLC (DIRSOL). All rights reserved.</p>
-          <p className="footer-wob-note">Proud Women-Owned Small Business</p>
         </div>
       </div>
     </footer>

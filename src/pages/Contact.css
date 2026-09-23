@@ -257,3 +257,12 @@
   .contact-form-wrap { padding: 28px 22px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 }
+
+.contact-intro a {
+  color: var(--gold-dark);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  transition: color var(--transition);
+}
+
+.contact-intro a:hover { color: var(--navy); }

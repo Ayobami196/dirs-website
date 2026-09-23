@@ -1,0 +1,225 @@
+/* =========================================
+   DIRSOL — Careers / Job Seekers Page
+   ========================================= */
+
+.careers-page .section-header.center { margin-bottom: 48px; }
+
+.section-subtext.careers-centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Why join ── */
+
+.careers-why {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius-md);
+  padding: 30px 26px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-bottom: 16px;
+  box-shadow: 0 0 0 4px rgba(201,168,76,0.2);
+}
+
+.benefit-card h4 {
+  font-family: var(--font-heading);
+  font-size: 0.99rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.benefit-card p {
+  font-size: 0.88rem;
+  color: var(--gray-dark);
+  line-height: 1.65;
+}
+
+/* ── Process ── */
+
+.careers-process {
+  padding: 90px 0;
+  background: var(--off-white);
+}
+
+.careers-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.careers-step {
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+}
+
+.cstep-num {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.cstep-num::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.cstep-body h4 {
+  font-family: var(--font-heading);
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 18px 0 10px;
+  line-height: 1.35;
+}
+
+.cstep-body p {
+  font-size: 0.85rem;
+  color: var(--gray-dark);
+  line-height: 1.65;
+}
+
+/* ── Submission form ── */
+
+.careers-form-section {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.careers-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.careers-form-intro > p {
+  font-size: 1rem;
+  color: var(--gray-dark);
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+
+.careers-intro-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.careers-intro-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.careers-intro-points li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--gold);
+}
+
+.careers-direct {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 22px;
+  background: var(--off-white);
+  border: 1px solid var(--gray-light);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+}
+
+.careers-direct span { color: var(--gray-dark); }
+
+.careers-direct a {
+  color: var(--navy);
+  font-weight: 700;
+  transition: color var(--transition);
+}
+
+.careers-direct a:hover { color: var(--gold-dark); }
+
+.careers-form-wrap {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 44px 40px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-light);
+}
+
+.careers-form h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--gray-light);
+}
+
+.careers-form-note {
+  margin-top: 18px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1000px) {
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .careers-steps { grid-template-columns: repeat(2, 1fr); }
+  .careers-form-grid { grid-template-columns: 1fr; gap: 44px; }
+}
+
+@media (max-width: 600px) {
+  .careers-why,
+  .careers-process,
+  .careers-form-section { padding: 60px 0; }
+
+  .benefits-grid { grid-template-columns: 1fr; }
+  .careers-steps { grid-template-columns: 1fr; }
+  .careers-form-wrap { padding: 28px 22px; }
+}

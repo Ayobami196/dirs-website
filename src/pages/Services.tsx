@@ -185,7 +185,26 @@ export default function Services() {
             <span>Services</span>
           </nav>
           <h1>Our <span style={{ color: 'var(--gold)' }}>Services</span></h1>
-          <p>Four core service lines engineered to keep your IT running, your data flowing, and your infrastructure built to last.</p>
+          <p>Beyond staffing, DIRSOL delivers the work itself &mdash; four service lines engineered to keep your IT running, your data flowing, and your infrastructure built to last.</p>
+        </div>
+      </section>
+
+      {/* ── Staffing lead-in ── */}
+      <section className="services-staffing-note">
+        <div className="container staffing-note-inner">
+          <div className="staffing-note-text">
+            <span className="staffing-note-tag">Start Here</span>
+            <h3>Looking for people, not a project?</h3>
+            <p>
+              DIRSOL began as an IT staffing company, and talent is still the core of what we do.
+              If you need technicians, engineers, or project leads on your team &mdash; on contract,
+              contract-to-hire, or direct hire &mdash; that lives on our staffing page.
+            </p>
+          </div>
+          <Link to="/staffing" className="btn-primary staffing-note-cta">
+            IT &amp; Data Center Staffing
+            <ArrowIcon />
+          </Link>
         </div>
       </section>
 
@@ -305,8 +324,8 @@ export default function Services() {
             {[
               { title: 'Single Point of Contact', desc: 'One dedicated team for all your IT needs — no runarounds, no hand-offs to strangers.' },
               { title: 'Proactive, Not Reactive', desc: 'We catch issues before they become outages, protecting your uptime and your reputation.' },
-              { title: 'Flexible Engagements', desc: 'Month-to-month, project-based, or long-term managed services — we work on your terms.' },
-              { title: 'Women-Owned Advantage', desc: "Partnering with DIRSOL may satisfy supplier diversity requirements for your organization's contracts." },
+              { title: 'Staffing or Full Delivery', desc: 'Start with a contractor and scale into a managed scope — or the reverse. Same vendor, same standard, no re-procurement.' },
+              { title: 'Certified & Trusted', desc: "DIRSOL meets supplier diversity requirements, bringing certified credibility to your vendor portfolio." },
             ].map((d) => (
               <div key={d.title} className="diff-card">
                 <div className="diff-bullet" />
@@ -328,7 +347,7 @@ export default function Services() {
             </div>
             <div className="cta-actions">
               <Link to="/contact" className="btn-primary">Schedule a Consultation</Link>
-              <Link to="/about" className="btn-outline">Learn About DIRSOL</Link>
+              <Link to="/staffing" className="btn-outline">Staffing Services</Link>
             </div>
           </div>
         </div>

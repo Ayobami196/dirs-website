@@ -25,14 +25,16 @@ export default function Navbar() {
 
         <nav className={`navbar-nav${menuOpen ? ' open' : ''}`}>
           <NavLink to="/"        onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} end>Home</NavLink>
-          <NavLink to="/about"   onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
+          <NavLink to="/staffing" onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Staffing</NavLink>
           <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Services</NavLink>
-          <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contact</NavLink>
+          <NavLink to="/careers"  onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Careers</NavLink>
+          <NavLink to="/about"    onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
+          <NavLink to="/contact"  onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contact</NavLink>
           <button
             className="btn-primary nav-cta"
             onClick={() => { navigate('/contact'); closeMenu() }}
           >
-            Get a Quote
+            Request Talent
           </button>
         </nav>
 
