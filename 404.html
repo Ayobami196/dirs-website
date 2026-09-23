@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // GitHub Pages SPA redirect
-      // Converts the path into a query string so index.html can restore it
-      var pathSegmentsToKeep = 1; // keep '/dirs-website' prefix
+      // GitHub Pages SPA redirect.
+      // Converts the path into a query string so index.html can restore it.
+      // The site is served from the apex domain (dirsol.com), not a repo
+      // subpath, so no leading path segments are preserved.
+      var pathSegmentsToKeep = 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
