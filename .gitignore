@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build output is published to the gh-pages branch, but kept here for reference
+# dist/
+
+# Local env overrides
+.env
+.env.local
+
+# Editor / OS
+.DS_Store
+*.local
+.vscode/*
+!.vscode/extensions.json

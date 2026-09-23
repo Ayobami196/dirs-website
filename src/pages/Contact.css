@@ -266,3 +266,34 @@
 }
 
 .contact-intro a:hover { color: var(--navy); }
+
+/* ── Delivery failure panel (shared by Contact and Careers forms) ── */
+
+.form-send-error {
+  margin: 4px 0 18px;
+  padding: 20px 22px;
+  background: #FDF6E8;
+  border: 1px solid rgba(201,168,76,0.45);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+}
+
+.form-send-error strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.form-send-error p {
+  font-size: 0.86rem;
+  color: var(--gray-dark);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.form-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

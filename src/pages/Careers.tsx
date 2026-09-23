@@ -1,5 +1,11 @@
 import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  submitForm,
+  mailtoFallback,
+  FormNotConfiguredError,
+  CONTACT_EMAIL,
+} from '../lib/submitForm'
 import './Careers.css'
 
 const roleOptions = [
@@ -84,8 +90,11 @@ const CheckIcon = () => (
 
 export default function Careers() {
   const [form, setForm] = useState<FormState>(emptyForm)
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [sendError, setSendError] = useState('')
   const [errors, setErrors] = useState<Partial<FormState>>({})
+
+  const submitted = status === 'sent'
 
   const validate = () => {
     const e: Partial<FormState> = {}
@@ -98,12 +107,36 @@ export default function Careers() {
     return e
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const payload = () => ({
+    name: form.name,
+    email: form.email,
+    phone: form.phone,
+    location: form.location,
+    role: form.role,
+    experience: form.experience,
+    resume: form.resume,
+    notes: form.message,
+  })
+
+  const subject = () => `Candidate submission — ${form.role || 'general'}`
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
-    setSubmitted(true)
+    setStatus('sending')
+    try {
+      await submitForm(payload(), subject())
+      setStatus('sent')
+    } catch (err) {
+      setSendError(
+        err instanceof FormNotConfiguredError
+          ? ''
+          : (err as Error).message || 'Something went wrong.',
+      )
+      setStatus('error')
+    }
   }
 
   const set = (field: keyof FormState) => (
@@ -111,6 +144,7 @@ export default function Careers() {
   ) => {
     setForm(prev => ({ ...prev, [field]: e.target.value }))
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: undefined }))
+    if (status === 'error') setStatus('idle')
   }
 
   return (
@@ -221,7 +255,7 @@ export default function Careers() {
                   background and get in touch if there is a fit &mdash; and we will keep your
                   profile on file for future assignments.
                 </p>
-                <button className="btn-primary" onClick={() => { setSubmitted(false); setForm(emptyForm) }}>
+                <button className="btn-primary" onClick={() => { setStatus('idle'); setForm(emptyForm) }}>
                   Submit Another Profile
                 </button>
               </div>
@@ -289,8 +323,23 @@ export default function Careers() {
                   />
                 </div>
 
-                <button type="submit" className="btn-primary form-submit">
-                  Submit My Profile
+                {status === 'error' && (
+                  <div className="form-send-error">
+                    <strong>We couldn&rsquo;t send that automatically.</strong>
+                    <p>
+                      {sendError
+                        ? `Delivery failed (${sendError}).`
+                        : 'Online submission is not switched on yet.'}{' '}
+                      Don&rsquo;t lose your details &mdash; send them straight to a recruiter instead.
+                    </p>
+                    <a className="btn-outline-dark" href={mailtoFallback(payload(), subject())}>
+                      Email {CONTACT_EMAIL}
+                    </a>
+                  </div>
+                )}
+
+                <button type="submit" className="btn-primary form-submit" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending…' : 'Submit My Profile'}
                   <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
                     <path fillRule="evenodd" d="M10.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 01-1.4-1.4L13.6 11H4a1 1 0 110-2h9.6l-3.3-3.3a1 1 0 010-1.4z" clipRule="evenodd" />
                   </svg>

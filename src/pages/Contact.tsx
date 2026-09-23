@@ -1,5 +1,11 @@
 import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  submitForm,
+  mailtoFallback,
+  FormNotConfiguredError,
+  CONTACT_EMAIL,
+} from '../lib/submitForm'
 import './Contact.css'
 
 const serviceOptions = [
@@ -29,8 +35,11 @@ export default function Contact() {
   const [form, setForm] = useState<FormState>({
     name: '', email: '', company: '', phone: '', service: '', message: '',
   })
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [sendError, setSendError] = useState('')
   const [errors, setErrors] = useState<Partial<FormState>>({})
+
+  const submitted = status === 'sent'
 
   const validate = () => {
     const e: Partial<FormState> = {}
@@ -42,12 +51,33 @@ export default function Contact() {
     return e
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
-    setSubmitted(true)
+    setStatus('sending')
+    try {
+      await submitForm(
+        {
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          phone: form.phone,
+          inquiry: form.service,
+          message: form.message,
+        },
+        `Website inquiry — ${form.service}`,
+      )
+      setStatus('sent')
+    } catch (err) {
+      setSendError(
+        err instanceof FormNotConfiguredError
+          ? ''
+          : (err as Error).message || 'Something went wrong.',
+      )
+      setStatus('error')
+    }
   }
 
   const set = (field: keyof FormState) => (
@@ -55,6 +85,7 @@ export default function Contact() {
   ) => {
     setForm(prev => ({ ...prev, [field]: e.target.value }))
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: undefined }))
+    if (status === 'error') setStatus('idle')
   }
 
   return (
@@ -147,7 +178,7 @@ export default function Contact() {
                   Thank you for reaching out to DO IT RIGHT SOLUTIONS. A member of our team
                   will be in touch with you within one business day.
                 </p>
-                <button className="btn-primary" onClick={() => { setSubmitted(false); setForm({ name:'', email:'', company:'', phone:'', service:'', message:'' }) }}>
+                <button className="btn-primary" onClick={() => { setStatus('idle'); setForm({ name:'', email:'', company:'', phone:'', service:'', message:'' }) }}>
                   Send Another Message
                 </button>
               </div>
@@ -202,8 +233,36 @@ export default function Contact() {
                   {errors.message && <span className="field-error">{errors.message}</span>}
                 </div>
 
-                <button type="submit" className="btn-primary form-submit">
-                  Send Message
+                {status === 'error' && (
+                  <div className="form-send-error">
+                    <strong>We couldn&rsquo;t send that automatically.</strong>
+                    <p>
+                      {sendError
+                        ? `Delivery failed (${sendError}).`
+                        : 'Online submission is not switched on yet.'}{' '}
+                      Your message is still here &mdash; send it directly and nothing is lost.
+                    </p>
+                    <a
+                      className="btn-outline-dark"
+                      href={mailtoFallback(
+                        {
+                          name: form.name,
+                          email: form.email,
+                          company: form.company,
+                          phone: form.phone,
+                          inquiry: form.service,
+                          message: form.message,
+                        },
+                        `Website inquiry — ${form.service}`,
+                      )}
+                    >
+                      Email {CONTACT_EMAIL}
+                    </a>
+                  </div>
+                )}
+
+                <button type="submit" className="btn-primary form-submit" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending…' : 'Send Message'}
                   <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
                     <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
                   </svg>

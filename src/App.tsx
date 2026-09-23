@@ -7,7 +7,6 @@ import Staffing from './pages/Staffing'
 import Services from './pages/Services'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
-import LogoSamples from './pages/LogoSamples'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/logo-samples" element={<LogoSamples />} />
           </Routes>
         </main>
         <Footer />
